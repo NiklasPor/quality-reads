@@ -2,46 +2,30 @@ module.exports = {
   theme: {
     extend: {
       maxWidth: {
-        iPhone: "23.4375rem",
-      },
-      maxHeight: {
-        iPhone: "50.75rem",
+        "80ch": "80ch",
       },
     },
     fontSize: {
       "14": "14px",
+      "18": "18px",
       "24": "24px",
-      "52": "52px",
+      "36": "36px",
     },
     colors: {
       white: "white",
-      gray: {
-        default: "#A9C3D3",
-        dark: "#2F4857",
-      },
-      green: "#37ECBA",
-      blue: "#72AFD3",
+      black: "black",
     },
     spacing: {
-      112: "7rem",
       64: "4rem",
+      48: "3rem",
       32: "2rem",
-      10: "0.625rem",
+      24: "1.5rem",
+      16: "1rem",
     },
-    boxShadow: {
-      focus: "0.25rem 0.25rem 0.1875rem rgba(47, 72, 87, 0.25)",
-    },
-    borderRadius: {
-      "4": "0.25rem",
-    },
-    linearGradientColors: (theme) => ({
-      "blue-green": [theme("colors")["blue"], theme("colors")["green"]],
-    }),
     fontFamily: {
-      sans: ["Nunito Sans", "sans-serif"],
-      display: ["Comfortaa", "sans-serif"],
+      sans: ["Noto Sans", "sans-serif"],
+      display: ["Sorts Mill Goudy", "serif"],
     },
   },
   variants: {},
-  plugins: [require("tailwindcss-gradients")],
 };

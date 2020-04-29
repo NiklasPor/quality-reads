@@ -1,10 +1,17 @@
+import { ContentComponent } from './content/content.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { categories } from './content/content';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./day1/day1.module').then((m) => m.Day1Module),
+    pathMatch: 'full',
+    redirectTo: categories[0].id,
+  },
+  {
+    path: ':category-id',
+    component: ContentComponent,
   },
 ];
 

@@ -4,10 +4,10 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ScullyLibModule } from '@scullyio/ng-lib';
-import { Day1Component } from './day1/day1.component';
+import { ContentComponent } from './content/content.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ContentComponent],
   imports: [BrowserModule, AppRoutingModule, ScullyLibModule],
   providers: [],
   bootstrap: [AppComponent],
