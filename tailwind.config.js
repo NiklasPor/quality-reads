@@ -22,6 +22,7 @@ module.exports = {
       24: "1.5rem",
       16: "1rem",
       8: "0.5rem",
+      0: "0px",
     },
     fontFamily: {
       sans: ["Noto Sans", "sans-serif"],
