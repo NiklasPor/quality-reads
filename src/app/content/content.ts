@@ -26,18 +26,18 @@ export const categories: Category[] = [
     id: 'relationships',
     title: 'Relationships',
   },
-  {
-    id: 'finances',
-    title: 'Finances',
-  },
+  // {
+  //   id: 'finances',
+  //   title: 'Finances',
+  // },
   {
     id: 'business',
     title: 'Business',
   },
-  {
-    id: 'cooking',
-    title: 'Cooking',
-  },
+  // {
+  //   id: 'cooking',
+  //   title: 'Cooking',
+  // },
 ];
 
 export const resources: Resource[] = [
@@ -68,10 +68,8 @@ export const resources: Resource[] = [
     author: 'Stephen R Covey',
     categories: ['self-improvement'],
     type: ResourceType.AMAZON,
-    url:
-      'https://www.amazon.de/7-Habits-Highly-Effective-People/dp/1416502491/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=',
+    url: 'https://www.amazon.de/7-Habits-Highly-Effective-People/dp/1416502491',
   },
-
   {
     title: 'How To Win Friends And Influence People',
     description:
@@ -82,4 +80,33 @@ export const resources: Resource[] = [
     url:
       'https://www.amazon.de/7-Habits-Highly-Effective-People/dp/1416502491/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=',
   },
+  {
+    title: 'The Lean Startup',
+    description:
+      'Most startups fail. But many of those failures are preventable. The Lean Startup is a new approach being adopted across the globe, changing the way companies are built and new products are launched.',
+    author: 'Eric Ries',
+    categories: ['business'],
+    type: ResourceType.AMAZON,
+    url:
+      'https://www.amazon.de/Lean-Startup-Entrepreneurs-Continuous-Innovation/dp/0307887898',
+  },
+  {
+    title: 'Thinking, Fast and Slow',
+    description: `Why is there more chance we'll believe something if it's in a bold type face? Why are judges more likely to deny parole before lunch? Why do we assume a good-looking person will be more competent? The answer lies in the two ways we make choices: fast, intuitive thinking, and slow, rational...`,
+    author: 'Daniel Kahneman',
+    categories: ['self-improvement'],
+    type: ResourceType.AMAZON,
+    url:
+      'https://www.amazon.de/Thinking-Fast-Slow-Daniel-Kahneman/dp/0141033576',
+  },
 ];
+
+// template
+const _: Resource = {
+  title: '',
+  description: '',
+  author: '',
+  categories: [''],
+  type: ResourceType.AMAZON,
+  url: '',
+};
