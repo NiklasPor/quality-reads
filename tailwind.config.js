@@ -21,11 +21,14 @@ module.exports = {
       32: "2rem",
       24: "1.5rem",
       16: "1rem",
+      8: "0.5rem",
     },
     fontFamily: {
       sans: ["Noto Sans", "sans-serif"],
       display: ["Sorts Mill Goudy", "serif"],
     },
   },
-  variants: {},
+  variants: {
+    padding: ["responsive", "hover", "group-hover", "focus"],
+  },
 };

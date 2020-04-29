@@ -1,10 +1,10 @@
 <div class="h-full w-full p-48 content-grid">
   <div class="font-display mr-64">
     <h2 class="text-18 leading-tight">Quality</h2>
-    <h1 class="text-36 leading-none mb-48">Reads</h1>
+    <h1 class="text-36 leading-none mb-32">Reads</h1>
 
     <a
-      class="mb-24 block transform hover:translate-x-16 duration-200 ease-in-out cursor-pointer"
+      class="block transform py-16 hover:pl-8 duration-200 ease-in-out cursor-pointer"
       *ngFor="let category of categories"
       [routerLink]="['/', category.id]"
       routerLinkActive="underline"
@@ -13,24 +13,28 @@
     </a>
   </div>
   <div class="">
-    <div
-      class="flex flex-col max-w-80ch mb-64"
+    <a
+      class="flex flex-col max-w-80ch mb-64 hover:border-black border border-white -m-16 p-16 transition-all duration-200 cursor-pointer group"
+      rel="noopener"
+      target="_blank"
       *ngFor="let resource of resources$ | async"
+      @slide
+      [href]="resource.url"
     >
       <h1 class="font-display text-24">{{ resource.title }}</h1>
       <em class="font-display text-18 mb-24">{{ resource.author }}</em>
       <span class="font-sans text-14 mb-16">{{ resource.description }}</span>
-      <a
-        rel="noopener"
-        target="_blank"
-        class="font-display text-18"
-        [href]="resource.url"
+      <span
+        class="font-display text-18 group-hover:pl-8 transform transition-all duration-200"
         [ngSwitch]="resource.type"
       >
         <span *ngSwitchCase="resourceType.MEDIUM"
           >Read it on <span class="underline">Medium</span></span
         >
-      </a>
-    </div>
+        <span *ngSwitchCase="resourceType.AMAZON"
+          >Read & hear it on <span class="underline">Amazon</span></span
+        >
+      </span>
+    </a>
   </div>
 </div>
