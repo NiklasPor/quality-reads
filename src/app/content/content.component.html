@@ -15,7 +15,7 @@
   <div class="">
     <div
       class="flex flex-col max-w-80ch mb-64"
-      *ngFor="let resource of resources"
+      *ngFor="let resource of resources$ | async"
     >
       <h1 class="font-display text-24">{{ resource.title }}</h1>
       <em class="font-display text-18 mb-24">{{ resource.author }}</em>

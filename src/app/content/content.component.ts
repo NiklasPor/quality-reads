@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { categories, resources, ResourceType } from './content';
+import { Router, ActivatedRoute } from '@angular/router';
+import { tap, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-content',
@@ -8,10 +10,15 @@ import { categories, resources, ResourceType } from './content';
 })
 export class ContentComponent implements OnInit {
   categories = categories;
-  resources = resources;
+  resources$ = this.route.params.pipe(
+    map((params) => params['category-id']),
+    map((categoryId) =>
+      resources.filter((resource) => resource.categories.includes(categoryId))
+    )
+  );
   resourceType = ResourceType;
 
-  constructor() {}
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {}
 }
