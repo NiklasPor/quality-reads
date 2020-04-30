@@ -15,13 +15,12 @@ import {
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.scss'],
   animations: [
-    trigger('slide', [
+    trigger('fadeIn', [
       transition(':enter', [style({ opacity: 0 }), animate(200)]),
     ]),
   ],
 })
 export class ContentComponent implements OnInit {
-  test = false;
   categories = categories;
   resources$ = this.route.params.pipe(
     map((params) => params['category-id']),

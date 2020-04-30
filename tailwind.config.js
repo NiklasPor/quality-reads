@@ -4,12 +4,15 @@ module.exports = {
       maxWidth: {
         "80ch": "80ch",
       },
+      gridTemplateColumns: {
+        "fr-auto-fr": "1fr auto 1fr",
+      },
     },
     fontSize: {
-      "14": "14px",
-      "18": "18px",
-      "24": "24px",
-      "36": "36px",
+      "14": "0.875rem",
+      "18": "1.125rem",
+      "24": "1.5rem",
+      "36": "2.25rem",
     },
     colors: {
       white: "white",
