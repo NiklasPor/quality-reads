@@ -99,6 +99,16 @@ export const resources: Resource[] = [
     url:
       'https://www.amazon.de/Thinking-Fast-Slow-Daniel-Kahneman/dp/0141033576',
   },
+  {
+    title: 'SELL LIKE CRAZY',
+    description:
+      'In what some are calling the most controversial marketing book of the decade. Sell Like Crazy reveals an 8-phase selling system for generating absurd amounts of leads, sales and profit for any business in any marketing with digital marketing!',
+    author: 'Sabri Suby',
+    categories: ['business'],
+    type: ResourceType.AMAZON,
+    url:
+      'https://www.amazon.de/SELL-LIKE-CRAZY-Customers-Possibly-ebook/dp/B07N7GRHNK',
+  },
 ];
 
 // template
